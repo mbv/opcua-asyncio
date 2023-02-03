@@ -76,7 +76,6 @@ class InternalSubscription:
         ts = time.time()
         period = self.data.RevisedPublishingInterval / 1000.0
         try:
-            await self.publish_results()
             while True:
                 next_ts = ts + period
                 sleep_time = next_ts - time.time()
